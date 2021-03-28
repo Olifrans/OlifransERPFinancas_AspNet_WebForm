@@ -20,8 +20,6 @@ namespace FaturamentoServicos.Account
         {
             Empregados emp = new Empregados(0, 0, "", "", "");
 
-
-
             emp.Empregado_idempregado = int.Parse(txtIdEmpregado.Text);
             emp.Acesso_idacesso = int.Parse(rdbAcesso.SelectedValue);
             emp.Nome_nome = txtNome.Text;
@@ -32,6 +30,5 @@ namespace FaturamentoServicos.Account
             lbnEstado.Text = "Conta Criada Com Sucesso";
 
         }
-
     }
 }
