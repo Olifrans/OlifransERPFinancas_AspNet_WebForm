@@ -47,7 +47,7 @@
             <tr>
                 <td style="height: 35px; width: 368px">Nivél de acesso</td>
                 <td style="height: 35px; width: 1337px">
-                    <asp:RadioButtonList ID="rdbAcesso" runat="server" RepeatDirection="Horizontal">
+                    <asp:RadioButtonList ID="rdbAcesso" runat="server" RepeatDirection="Horizontal" Enabled="False">
                         <asp:ListItem Value="1">Nivel 1</asp:ListItem>
                         <asp:ListItem Value="2">Nivel 2</asp:ListItem>
                     </asp:RadioButtonList>
@@ -56,7 +56,7 @@
             <tr>
                 <td style="height: 35px; width: 368px">&nbsp;</td>
                 <td style="height: 35px; width: 1337px">
-                    <asp:Button ID="btnNovo" runat="server" OnClick="btnNovo_Click" Text="Criar" />
+                    <asp:Button ID="btnNovo" runat="server" OnClick="btnNovo_Click" Text="Novo" />
                     <asp:Button ID="btnAlterar" runat="server" Text="Alterar" OnClick="btnAlterar_Click" />
                     <asp:Button ID="btnExcluir" runat="server" Text="Excluir" OnClick="btnExcluir_Click" />
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" />

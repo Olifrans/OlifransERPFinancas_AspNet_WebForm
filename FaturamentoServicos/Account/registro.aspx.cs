@@ -18,13 +18,13 @@ namespace FaturamentoServicos.Account
         //Metodo edição enterface usuario habilitar botões
         public void GUIEdicao()
         {
-            txtBuscar.Enabled       = true;
-            txtIdEmpregado.Enabled  = true;
-            txtNome.Enabled         = true;
-            txtUsuario.Enabled      = true;
-            txtSenha.Enabled        = true;
-            rdbAcesso.Enabled       = true;
-            lbnEstado.Text          = "";
+            txtBuscar.Enabled = true;
+            txtIdEmpregado.Enabled = true;
+            txtNome.Enabled = true;
+            txtUsuario.Enabled = true;
+            txtSenha.Enabled = true;
+            rdbAcesso.Enabled = true;
+            lbnEstado.Text = "";
 
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
@@ -33,7 +33,6 @@ namespace FaturamentoServicos.Account
         //Metodo limpeza da edição enterface usuario habilitar botões
         public void GUILimpar()
         {
-
             txtIdEmpregado.Text = "";
             txtNome.Text = "";
             txtUsuario.Text = "";
@@ -43,36 +42,71 @@ namespace FaturamentoServicos.Account
             //txtBuscar.Text = "";
         }
 
+        //Metodo habilita da edição enterface usuario do botão buscar
+        public void GUIEdicaoTerminada()
+        {
+            txtBuscar.Enabled = true;
+            txtIdEmpregado.Enabled = false;
+            txtUsuario.Enabled = false;
+            txtSenha.Enabled = false;
+            txtNome.Enabled = false;
+            rdbAcesso.Enabled = false;
+
+            lbnEstado.Text = "";
+            btnNovo.Text = "Novo";
+
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+        }
+
+
         // BUTTON CRIAR - Metodo adcionar criar registro de novos usuarios no BD pelo botão Criar
         protected void btnNovo_Click(object sender, EventArgs e)
         {
-            if (btnNovo.Text == "Novo"){
+            if (btnNovo.Text == "Novo")
+            {
                 GUIEdicao();
                 GUILimpar();
                 btnNovo.Text = "Salvar";
-
             }
-            else if(btnNovo.Text == "Salvar")
+            else if (btnNovo.Text == "Salvar")
             {
+                try
+                {
+                    Empregados emp = new Empregados(0, 0, "", "", "");
+                    if (emp.verifica_dados_existe(int.Parse(txtIdEmpregado.Text.Trim()))) //Verificar se o cadastro já existe
+                    {
+                        emp.Empregado_idempregado = int.Parse(txtIdEmpregado.Text);
+                        emp.Acesso_idacesso = int.Parse(rdbAcesso.SelectedValue);
+                        emp.Nome_nome = txtNome.Text;
+                        emp.Usuario_usuario = txtUsuario.Text;
+                        emp.Senha_senha = txtSenha.Text;
 
-                    
+                        emp.alterar();
+                        GUIEdicaoTerminada();
+                        lbnEstado.Text = "Conta Atualizada Com Sucesso";
+                        btnNovo.Text = "Novo";
+                    }
+                    else
+                    {
+                        emp.Empregado_idempregado = int.Parse(txtIdEmpregado.Text);
+                        emp.Acesso_idacesso = int.Parse(rdbAcesso.SelectedValue);
+                        emp.Nome_nome = txtNome.Text;
+                        emp.Usuario_usuario = txtUsuario.Text;
+                        emp.Senha_senha = txtSenha.Text;
+
+                        emp.adcionar();
+                        GUIEdicaoTerminada();
+                        lbnEstado.Text = "Novo registro salvo com sucesso";
+                        btnNovo.Text = "Novo";
+                    }
+                }
+                catch (Exception)
+                {
+                    lbnEstado.Text = "Não deve existe campos vazios";
+                }
             }
-
-
-            //Criar novo registro
-            Empregados emp = new Empregados(0, 0, "", "", "");
-            
-            emp.Empregado_idempregado = int.Parse(txtIdEmpregado.Text);
-            emp.Acesso_idacesso = int.Parse(rdbAcesso.SelectedValue);
-            emp.Nome_nome = txtNome.Text;
-            emp.Usuario_usuario = txtUsuario.Text;
-            emp.Senha_senha = txtSenha.Text;
-
-            emp.adcionar();
-            lbnEstado.Text= "Conta Criada Com Sucesso" ;
-
         }
-
 
 
 
@@ -120,9 +154,7 @@ namespace FaturamentoServicos.Account
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            Empregados emp = new Empregados(0, 0, "", "", "");
 
-            
         }
     }
 }
