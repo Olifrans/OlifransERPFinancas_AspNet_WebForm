@@ -8,42 +8,40 @@
             <tr>
                 <td rowspan="8" style="height: 281px; width: 336px">
                     <asp:TextBox ID="txtBuscar" runat="server"></asp:TextBox>
-                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
                     <img alt="" src="../images/login/LoginEmpregado.jpg" style="width: 255px; height: 262px" /></td>
                 <td colspan="2" style="height: 34px">
-                    <asp:Button ID="btnNovo" runat="server" OnClick="btnNovo_Click" Text="Novo" />
-                    <asp:Button ID="btnAlterar" runat="server" Text="Alterar" />
-                    <asp:Button ID="btnExcluir" runat="server" Text="Excluir" />
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" />
+                    <h1>
+                         <asp:Label ID="lbnEstado" runat="server"></asp:Label>
+                    </h1>                 
                 </td>
             </tr>
             <tr>
                 <td colspan="2" style="height: 34px">
-                    <asp:Label ID="lbnEstado" runat="server"></asp:Label>
-                </td>
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td style="width: 368px; height: 34px">Código do Empregado</td>
                 <td style="width: 1337px; height: 34px">
-                    <asp:TextBox ID="txtIdEmpregado" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtIdEmpregado" runat="server" Enabled="False"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="width: 368px; height: 34px">Nome</td>
                 <td style="width: 1337px; height: 34px">
-                    <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtNome" runat="server" Enabled="False"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="height: 34px; width: 368px">Usuario</td>
                 <td style="height: 34px; width: 1337px">
-                    <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtUsuario" runat="server" Enabled="False"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="height: 35px; width: 368px">Senha</td>
                 <td style="height: 35px; width: 1337px">
-                    <asp:TextBox ID="txtSenha" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtSenha" runat="server" Enabled="False"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -57,7 +55,12 @@
             </tr>
             <tr>
                 <td style="height: 35px; width: 368px">&nbsp;</td>
-                <td style="height: 35px; width: 1337px">&nbsp;</td>
+                <td style="height: 35px; width: 1337px">
+                    <asp:Button ID="btnNovo" runat="server" OnClick="btnNovo_Click" Text="Criar" />
+                    <asp:Button ID="btnAlterar" runat="server" Text="Alterar" OnClick="btnAlterar_Click" />
+                    <asp:Button ID="btnExcluir" runat="server" Text="Excluir" OnClick="btnExcluir_Click" />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" />
+                </td>
             </tr>
         </table>
     </form>
