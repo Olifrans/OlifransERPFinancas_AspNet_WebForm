@@ -41,20 +41,23 @@
             <tr>
                 <td style="height: 35px; width: 368px">Senha</td>
                 <td style="height: 35px; width: 1337px">
-                    <asp:TextBox ID="txtSenha" runat="server" Enabled="False"></asp:TextBox>
+                    <asp:TextBox ID="txtSenha" runat="server" Enabled="False" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="height: 35px; width: 368px">Nivél de acesso</td>
                 <td style="height: 35px; width: 1337px">
-                    <asp:RadioButtonList ID="rdbAcesso" runat="server" RepeatDirection="Horizontal" Enabled="False">
+                    <asp:RadioButtonList ID="rdbAcesso" runat="server" RepeatDirection="Horizontal" Enabled="False" DataSourceID="SqlDataSourceNivelAcesso" DataTextField="Descricao" DataValueField="IdAcesso">
                         <asp:ListItem Value="1">Nivel 1</asp:ListItem>
                         <asp:ListItem Value="2">Nivel 2</asp:ListItem>
                     </asp:RadioButtonList>
+                    <asp:SqlDataSource ID="SqlDataSourceNivelAcesso" runat="server" ConnectionString="<%$ ConnectionStrings:FaturamentoServicoConnectionString %>" SelectCommand="SELECT * FROM [tbl_acesso]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>
-                <td style="height: 35px; width: 368px">&nbsp;</td>
+                <td style="height: 35px; width: 368px">
+                    <asp:HyperLink ID="linkVoltarHome" runat="server" NavigateUrl="~/Account/login.aspx">Volta a Pagina Login</asp:HyperLink>
+                </td>
                 <td style="height: 35px; width: 1337px">
                     <asp:Button ID="btnNovo" runat="server" OnClick="btnNovo_Click" Text="Novo" />
                     <asp:Button ID="btnAlterar" runat="server" Text="Alterar" OnClick="btnAlterar_Click" />

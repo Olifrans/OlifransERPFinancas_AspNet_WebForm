@@ -108,6 +108,7 @@
     <Content Include="ContentHome\js\plugin.js" />
     <Content Include="ContentHome\js\popper.min.js" />
     <Content Include="Home.aspx" />
+    <Content Include="HomeAdmin.aspx" />
     <Content Include="images\demo\100x100.gif" />
     <Content Include="images\demo\100x75.gif" />
     <Content Include="images\demo\240x90.gif" />
@@ -119,6 +120,7 @@
     <Content Include="images\demo\imgl.gif" />
     <Content Include="images\demo\imgr.gif" />
     <Content Include="images\demo\index.html" />
+    <Content Include="images\home\home.jpg" />
     <Content Include="images\index.html" />
     <Content Include="images\login\login1.jpg" />
     <Content Include="images\login\LoginEmpregado.jpg" />
@@ -136,6 +138,7 @@
     <Content Include="layout\styles\layout.css" />
     <Content Include="layout\styles\navi.css" />
     <Content Include="layout\styles\tables.css" />
+    <Content Include="Pages\clientes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +156,7 @@
     <Compile Include="Account\registro.aspx.designer.cs">
       <DependentUpon>registro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Code\Cliente.cs" />
     <Compile Include="Code\Conexao.cs" />
     <Compile Include="Code\DataSetFaturamento.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -168,6 +172,20 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="HomeAdmin.aspx.cs">
+      <DependentUpon>HomeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeAdmin.aspx.designer.cs">
+      <DependentUpon>HomeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageAdmin.Master.cs">
+      <DependentUpon>PageAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageAdmin.Master.designer.cs">
+      <DependentUpon>PageAdmin.Master</DependentUpon>
+    </Compile>
     <Compile Include="PageHome.Master.cs">
       <DependentUpon>PageHome.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -181,6 +199,13 @@
     </Compile>
     <Compile Include="PageLogin.Master.designer.cs">
       <DependentUpon>PageLogin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\clientes.aspx.cs">
+      <DependentUpon>clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\clientes.aspx.designer.cs">
+      <DependentUpon>clientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -199,6 +224,7 @@
     <None Include="packages.config" />
     <Content Include="PageLogin.Master" />
     <Content Include="PageHome.Master" />
+    <Content Include="PageAdmin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

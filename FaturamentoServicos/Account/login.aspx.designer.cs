@@ -51,15 +51,6 @@ namespace FaturamentoServicos.Account
         protected global::System.Web.UI.WebControls.CheckBox chkLembrarSessao;
 
         /// <summary>
-        /// lblEstado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEstado;
-
-        /// <summary>
         /// btnFazerLogin control.
         /// </summary>
         /// <remarks>
@@ -76,5 +67,14 @@ namespace FaturamentoServicos.Account
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink linkCriarConta;
+
+        /// <summary>
+        /// lblEstado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEstado;
     }
 }

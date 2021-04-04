@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FaturamentoServicos.Account
+namespace FaturamentoServicos.Pages
 {
 
 
-    public partial class registro
+    public partial class clientes
     {
 
         /// <summary>
@@ -24,22 +24,22 @@ namespace FaturamentoServicos.Account
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txtBuscar control.
+        /// txtBuscarCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBuscar;
+        protected global::System.Web.UI.WebControls.TextBox txtBuscarCliente;
 
         /// <summary>
-        /// btnBuscar control.
+        /// btnBuscarCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
+        protected global::System.Web.UI.WebControls.Button btnBuscarCliente;
 
         /// <summary>
         /// lbnEstado control.
@@ -51,58 +51,85 @@ namespace FaturamentoServicos.Account
         protected global::System.Web.UI.WebControls.Label lbnEstado;
 
         /// <summary>
-        /// txtIdEmpregado control.
+        /// txtIdCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdEmpregado;
+        protected global::System.Web.UI.WebControls.TextBox txtIdCliente;
 
         /// <summary>
-        /// txtNome control.
+        /// txtNomeCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNome;
+        protected global::System.Web.UI.WebControls.TextBox txtNomeCliente;
 
         /// <summary>
-        /// txtUsuario control.
+        /// txtSobrenome1Cliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtSobrenome1Cliente;
 
         /// <summary>
-        /// txtSenha control.
+        /// txtSobrenome2Cliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSenha;
+        protected global::System.Web.UI.WebControls.TextBox txtSobrenome2Cliente;
 
         /// <summary>
-        /// rdbAcesso control.
+        /// txtEnderecoCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rdbAcesso;
+        protected global::System.Web.UI.WebControls.TextBox txtEnderecoCliente;
 
         /// <summary>
-        /// SqlDataSourceNivelAcesso control.
+        /// txtEmailCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceNivelAcesso;
+        protected global::System.Web.UI.WebControls.TextBox txtEmailCliente;
+
+        /// <summary>
+        /// txtTelefoneCliente control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTelefoneCliente;
+
+        /// <summary>
+        /// drpEmpresa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpEmpresa;
+
+        /// <summary>
+        /// SqlDataSourceEmpresa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceEmpresa;
 
         /// <summary>
         /// linkVoltarHome control.
@@ -114,39 +141,39 @@ namespace FaturamentoServicos.Account
         protected global::System.Web.UI.WebControls.HyperLink linkVoltarHome;
 
         /// <summary>
-        /// btnNovo control.
+        /// btnNovoCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNovo;
+        protected global::System.Web.UI.WebControls.Button btnNovoCliente;
 
         /// <summary>
-        /// btnAlterar control.
+        /// btnAlterarCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAlterar;
+        protected global::System.Web.UI.WebControls.Button btnAlterarCliente;
 
         /// <summary>
-        /// btnExcluir control.
+        /// btnExcluirCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExcluir;
+        protected global::System.Web.UI.WebControls.Button btnExcluirCliente;
 
         /// <summary>
-        /// btnCancelar control.
+        /// btnCancelarCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelar;
+        protected global::System.Web.UI.WebControls.Button btnCancelarCliente;
     }
 }

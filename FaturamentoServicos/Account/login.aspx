@@ -7,7 +7,7 @@
     <form id="form1" runat="server">
     <table style="width: 100%">
     <tr>
-        <td rowspan="6" style="width: 51px">
+        <td rowspan="7" style="width: 51px">
             <img alt="" src="../images/login/login1.jpg" style="width: 225px; height: 225px" /></td>
         <td>&nbsp;</td>
         <td>Iniciar Sessão</td>
@@ -33,14 +33,19 @@
     <tr>
         <td>&nbsp;</td>
         <td>
-            <asp:Label ID="lblEstado" runat="server"></asp:Label>
-        </td>
+            &nbsp;</td>
     </tr>
     <tr>
         <td>&nbsp;</td>
         <td>
-            <asp:Button ID="btnFazerLogin" runat="server" Text="Fazer Login" Width="128px" />
+            <asp:Button ID="btnFazerLogin" runat="server" Text="Fazer Login" Width="128px" OnClick="btnFazerLogin_Click" />
             <asp:HyperLink ID="linkCriarConta" runat="server" NavigateUrl="~/Account/registro.aspx">Criar Conta</asp:HyperLink>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <h1> <asp:Label ID="lblEstado" runat="server"></asp:Label> </h1>      
         </td>
     </tr>
 </table>

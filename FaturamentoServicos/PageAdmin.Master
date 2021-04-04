@@ -1,18 +1,24 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PageLogin.master.cs" Inherits="FaturamentoServicos.PageLogin" %>
-
-<!DOCTYPE html>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PageAdmin.master.cs" Inherits="FaturamentoServicos.PageAdmin" %>
 
 
-<html>
-<head runat="server">
-    <title>Olifrans ERP Faturamento</title>
-
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Olifrans ERP Faturamento</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+
+    <link href="layout/styles/layout.css" rel="stylesheet" />
+    <script src="layout/scripts/jquery.min.js"></script>
+    <script src="layout/scripts/jquery.hslides.1.0.js"></script>
+    <script src="layout/scripts/jquery.easing.1.3.js"></script>
+
+
+<%--<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
 <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
 <script type="text/javascript" src="layout/scripts/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="layout/scripts/jquery.hslides.1.0.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.hslides.1.0.js"></script>--%>
+
+
 <script type="text/javascript">
     $((function () {
         $('#accordion').hSlides({
@@ -26,27 +32,19 @@
     }));
 </script>
 
-
     <style type="text/css">
-        .auto-style2 {
-            width: 75px;
-        }
-        .auto-style3 {
-            height: 46px;
+        .auto-style1 {
+            width: 273px;
+            height: 185px;
         }
     </style>
 
-
 </head>
 <body id="top">
-
-
-
-
 <div id="header">
   <div class="wrapper">
     <div class="fl_left">
-      <h1><a href="index.html"> Faturamento Login</a></h1>
+        <h1><a href="index.html"> Faturamento Login</a></h1>
         <p> Olifrans Gestão Financeira</p>
     </div>
     <div class="fl_right"> <a href="#"><img src="images/demo/468x60.gif" alt="" /></a> </div>
@@ -59,22 +57,26 @@
   <div class="wrapper">
     <div id="topnav">
       <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li class="last"><a href="/Account/login.aspx">Sobre</a></li>
-        <li class="auto-style3"pages/full-width.html">Serviços</a></li>
-        <li class="last"><a href="/Account/login.aspx">Login</a></li>
+        <li class="active"><a href="Home.aspx">Home</a></li>
+       <%-- <li><a href="pages/style-demo.html">Style Demo</a></li>
+        <li><a href="pages/full-width.html">Full Width</a></li>--%>
+        <li><a href="#">Serviços</a>
+          <ul>
+            <li><a href="/Pages/clientes.aspx">Clientes</a></li>
 
-        <li class="last"><a href="/Login.aspx" class="auto-style2">Fazer Login</a></li>
-
-
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </li>
+        <li class="last"><a href="#">A Long Link Text</a></li>
       </ul>
     </div>
     <div id="search">
       <form action="#" method="post">
         <fieldset>
           <legend>Site Search</legend>
-          <input type="text" value="Digite a busca"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
-          <input type="submit" name="go" id="go" value="Buscar" />
+          <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="submit" name="go" id="go" value="Search" />
         </fieldset>
       </form>
     </div>
@@ -82,22 +84,18 @@
   </div>
 </div>
 
-
 <!-- ####################################################################################################### -->
 <div id="container">
   <div class="wrapper">
-       <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
-              
-	Aqui colocar conteudo Teste
-	MasterPageLogin.master
+          <p> <img alt="" class="auto-style1" src="images/home/home.jpg" /></p>
 
 
-           </asp:ContentPlaceHolder>
+      </asp:ContentPlaceHolder>
     <br class="clear" />
   </div>
 </div>
-
 
 <!-- ####################################################################################################### -->
 <div id="copyright">
@@ -107,5 +105,6 @@
     <br class="clear" />
   </div>
 </div>
+
 </body>
 </html>

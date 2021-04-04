@@ -13,7 +13,6 @@ namespace FaturamentoServicos.Code
     public class Empregados : Conexao
     {
         //Variaveis globais
-        //string tabela = "tbl_empregado";
         string tabela = "tbl_empregado";
         protected string Nome, Usuario, Senha;
         protected int IdEmpregado, IdAcesso;
@@ -155,6 +154,32 @@ namespace FaturamentoServicos.Code
             return false;
         }
 
+
+        //Metodo fazer login
+        public bool FazerLogin( string usuario, string senha)
+        {
+            conectar(tabela);
+            DataRow fila;
+
+            int dados = Data.Tables[tabela].Rows.Count - 1; //Percorre os registros existente na tabela
+            for (int i = 0; i <= dados; i++)
+            {
+                fila = Data.Tables[tabela].Rows[i];
+                //Validação de usuario e senha
+                if (fila["Usuario"].ToString().Trim().ToLower() == usuario.Trim().ToLower() &&
+                    fila["Senha"].ToString().Trim() == senha.Trim())
+                {
+                    Empregado_idempregado = int.Parse(fila["IdEmpregado"].ToString());
+                    Acesso_idacesso = int.Parse(fila["IdAcesso"].ToString());
+                    Nome_nome = fila["Nome"].ToString();
+                    Usuario_usuario = fila["Usuario"].ToString();
+                    Senha_senha = fila["Senha"].ToString();
+                    return true;
+                }
+            }
+            //Caso o objeto não exista no BD.
+            return false;
+        }
 
     }
 }
